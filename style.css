@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.timezone-list {
+    margin-bottom: 20px;
+}
+
+.timezone-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.timezone-item select {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.timezone-item select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.timezone-item input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 150px;
+}
+
+.timezone-item input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.remove-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.remove-btn:hover {
+    background: #ff3838;
+}
+
+.add-timezone-btn {
+    width: 100%;
+    padding: 15px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 30px;
+}
+
+.add-timezone-btn:hover {
+    background: #5568d3;
+}
+
+.time-slider-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.time-slider-section label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+#timeSlider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+#timeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+
+#timeSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    border: none;
+}
+
+.current-time {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-top: 15px;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.results h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.meeting-time-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.meeting-time-item:hover {
+    transform: translateX(5px);
+}
+
+.meeting-time-item.good {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.meeting-time-item.warning {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.meeting-time-item.bad {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.meeting-time-item .location {
+    font-weight: 600;
+    color: #333;
+}
+
+.meeting-time-item .time {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .timezone-item {
+        flex-direction: column;
+    }
+    
+    .timezone-item input {
+        width: 100%;
+    }
+}
